@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Scala-runoob/Scala-runoob.iml" filepath="$PROJECT_DIR$/Scala-runoob/Scala-runoob.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scala-w3cSchool/Scala-w3cSchool.iml" filepath="$PROJECT_DIR$/Scala-w3cSchool/Scala-w3cSchool.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scala-runoob/scala-runoob.iml" filepath="$PROJECT_DIR$/scala-runoob/scala-runoob.iml" />
     </modules>
   </component>
 </project>
