@@ -38,6 +38,7 @@ package com.eco.study.leetcode.sort;
 public class Lesson75 {
     public static void main(String[] args) {
         int[] nums = {2,0,2,1,1,0};
+//        int[] nums = {2,0,1};
         Solution75 solution = new Solution75();
 
         solution.sortColors(nums);
@@ -51,12 +52,26 @@ public class Lesson75 {
 class Solution75 {
     public void sortColors(int[] nums){
         int redIndex = 0;
-        int whiteIndex = 0;
-        int blueIndex = 0;
-
-        // 0 , 1 , 2
+        int blueIndex = nums.length-1;
+        int tmp;
         for (int i = 0; i < nums.length; i++) {
-
+            switch (nums[i]){
+                case 0:
+                    tmp = nums[redIndex];
+                    nums[redIndex] = nums[i];
+                    nums[i] = tmp;
+                    redIndex++;
+                    break;
+                case 2:
+                    if(i<blueIndex){
+                        tmp = nums[blueIndex];
+                        nums[blueIndex] = nums[i];
+                        nums[i] = tmp;
+                        blueIndex--;
+                        i--;
+                    }
+                    break;
+            }
         }
 
     }
