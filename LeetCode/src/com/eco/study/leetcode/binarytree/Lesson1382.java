@@ -1,7 +1,5 @@
 package com.eco.study.leetcode.binarytree;
 
-import sun.security.x509.GeneralSubtree;
-
 /**
  * @mail wangxiyue.xy@163.com
  * @date 2021-02-20 18:08
@@ -26,6 +24,8 @@ import sun.security.x509.GeneralSubtree;
 public class Lesson1382 {
     public static void main(String[] args) {
         Integer[] input  = new Integer[]{1,null,2,null,3,null,4,null,null};
+        Solution1382 solution = new Solution1382();
+
     }
 
     public static TreeNode buildTree(Integer[] input){
@@ -64,6 +64,18 @@ public class Lesson1382 {
 class Solution1382{
 
     public TreeNode balanceBST(TreeNode root) {
+        TreeNode tmp  =null;
+        if(root!=null){
+            if (root.left == null) {
+                root.left = root;
+                root = root.right;
+            }
+            if(root.right ==null){
+                root.right = root;
+                root = root.left;
+            }
+        }
+
 
         return null;
     }
