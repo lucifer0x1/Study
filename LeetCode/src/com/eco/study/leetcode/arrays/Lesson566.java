@@ -25,7 +25,7 @@ import java.util.Arrays;
  * 输入：mat = [[1,2],[3,4]], r = 2, c = 4
  * 输出：[[1,2],[3,4]]
  */
-public class Lession566 {
+public class Lesson566 {
 
     public static void main(String[] args) {
         int[][] mat = {{1,2},{3,4}};
