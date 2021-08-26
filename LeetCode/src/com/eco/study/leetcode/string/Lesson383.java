@@ -62,7 +62,7 @@ class Solution383 {
         Map<String,Integer> r = countCharSumToMap(ransomNote);
         Map<String,Integer> m = countCharSumToMap(magazine);
         for (String k : r.keySet()) {
-            if(m.getOrDefault(k,0) < r.get(k)){
+            if(m.getOrDefault(k,0).intValue() < r.get(k).intValue()){
                 return false;
             }
         }
