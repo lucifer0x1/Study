@@ -43,7 +43,7 @@ public class Lesson383 {
 
 class Solution383 {
 
-    //利用字符串查找
+    //利用字符串查找 , 这个方法貌似效率 也不高， 因为需要每次 replace 重新赋值
     public boolean canConstruct(String ransomNote , String magazine){
         String noteStr = null;
         for (int i = 0; i < ransomNote.length(); i++) {
