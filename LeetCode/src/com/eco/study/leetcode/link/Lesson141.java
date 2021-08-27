@@ -44,7 +44,7 @@ public class Lesson141 {
     public static void main(String[] args) {
         int[] head = {1,2};
         int pos = -1;
-        ListNode headNode = buildListNode(head,pos);
+        Solution141.ListNode headNode = buildListNode(head,pos);
         Solution141 solution = new Solution141();
         System.out.println(solution.hasCycle(headNode));
         if(pos<0){
@@ -54,22 +54,22 @@ public class Lesson141 {
     }
 
 
-    public static void printListNode(ListNode head){
+    public static void printListNode(Solution141.ListNode head){
         while (head!=null){
             System.out.println(head.val);
             head = head.next;
         }
     }
 
-    public static ListNode buildListNode(int[] head,int pos){
-        ListNode headNode = new ListNode(head[0]);
-        ListNode last = headNode;
-        ListNode posNode = null;
+    public static Solution141.ListNode buildListNode(int[] head, int pos){
+        Solution141.ListNode headNode = new Solution141.ListNode(head[0]);
+        Solution141.ListNode last = headNode;
+        Solution141.ListNode posNode = null;
         if(pos == 0 ){
             posNode = headNode;
         }
         for (int i = 1; i < head.length; i++) {
-                last.next = new ListNode(head[i]);
+                last.next = new Solution141.ListNode(head[i]);
                 last = last.next;
                 if(pos == i){
                     posNode = last;
@@ -97,14 +97,15 @@ class Solution141 {
         } while (fast != slow);
         return true;
     }
-}
 
-class ListNode {
-    int val;
-    ListNode next;
+    static class ListNode {
+        int val;
+        ListNode next;
 
-    public ListNode(int val) {
-        this.val = val;
-        this.next = null;
+        public ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
     }
 }
+
