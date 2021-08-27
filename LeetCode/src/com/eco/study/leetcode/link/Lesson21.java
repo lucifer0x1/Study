@@ -128,8 +128,6 @@ class Solution21 {
             this.val = val;
             this.next = next;
         }
-
-
     }
 }
 
