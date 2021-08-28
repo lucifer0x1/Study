@@ -61,8 +61,10 @@ public class Lesson232 {
 
 class Solution232 {
 
-
-
+    /**
+     ** 栈：只有一边 进出，所有是先进后出入
+     ** 对列：一边进，一边出，所以是先进，先出
+     */
     class MyQueue {
 
         List<Integer> list = new LinkedList<Integer>();
