@@ -55,7 +55,12 @@ import java.util.List;
 public class Lesson232 {
 
     public static void main(String[] args) {
-
+        Solution232.MyQueue myQueue = new Solution232.MyQueue();
+        myQueue.push(1); // queue is: [1]
+        myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)
+        System.out.println(myQueue.peek()); // return 1
+        System.out.println(myQueue.pop()); // return 1, queue is [2]
+        System.out.println(myQueue.empty()); // return false
     }
 }
 
@@ -65,7 +70,7 @@ class Solution232 {
      ** 栈：只有一边 进出，所有是先进后出入
      ** 对列：一边进，一边出，所以是先进，先出
      */
-    class MyQueue {
+    static class MyQueue {
 
         List<Integer> list = new LinkedList<Integer>();
 
