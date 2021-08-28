@@ -1,6 +1,7 @@
 package com.eco.study.leetcode.binarytree;
 
-import java.util.Deque;
+import com.eco.study.leetcode.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
