@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaDesign23/JavaDesign23.iml" filepath="$PROJECT_DIR$/JavaDesign23/JavaDesign23.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scala-runoob/Scala-runoob.iml" filepath="$PROJECT_DIR$/Scala-runoob/Scala-runoob.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scala-w3cSchool/Scala-w3cSchool.iml" filepath="$PROJECT_DIR$/Scala-w3cSchool/Scala-w3cSchool.iml" />
