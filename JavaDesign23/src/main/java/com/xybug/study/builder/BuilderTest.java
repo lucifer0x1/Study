@@ -10,13 +10,28 @@ package com.xybug.study.builder;
 public class BuilderTest {
 
     public static void main(String[] args) {
+        productBuilderTest01();
+        productBuilderTest02();
+    }
+
+    public static void productBuilderTest01(){
         DefaultConcreteProductBuilder builder = new DefaultConcreteProductBuilder();
         Director director = new Director(builder);
-        Product product = director.makeProduct("ProdutA", "com.xybug.study",
+        Product product = director.makeProduct("ProductA", "com.xybug.study",
                 "p1", "p2", "p3", "p4");
         System.out.println(product);
     }
+
+    public static void productBuilderTest02(){
+        Product.Builder builder = new Product.Builder().productName("ProductB").companyName("com.xybug.study");
+        builder.part1("B Part 1").part2("B Part 2").part3("B Part 3");
+        builder.part4("B part 4");
+        Product product = builder.build();
+        System.out.println(product);
+    }
 }
+
+
 
 interface ProductBuilder {
     void builderProductName(String productName);
@@ -115,6 +130,54 @@ class Product {
         this.part2 = part2;
         this.part3 = part3;
         this.part4 = part4;
+    }
+
+    /**
+     * 链式调用
+     */
+    static class Builder {
+        private String productName;
+        private String companyName;
+        private String part1;
+        private String part2;
+        private String part3;
+        private String part4;
+
+        public Builder productName(String productName){
+            this.productName = productName;
+            return this;
+        }
+
+        public Builder companyName(String companyName){
+            this.companyName = companyName;
+            return this;
+        }
+
+        public Builder part1(String part1){
+            this.part1 = part1;
+            return this;
+        }
+
+        public Builder part2(String part2){
+            this.part2 = part2;
+            return this;
+        }
+
+        public Builder part3(String part3){
+            this.part3 = part3;
+            return this;
+        }
+
+        public Builder part4(String part4){
+            this.part4 = part4;
+            return this;
+        }
+
+        Product build(){
+            return new Product(this.productName,this.companyName,
+                    this.part1,this.part2,this.part3,this.part4);
+        }
+
     }
 
     public String getProductName() {
