@@ -89,10 +89,6 @@ class Solution144 {
             if(left!=null){
                 next.add(left);
             }
-
-
-
-
         }
         return list;
     }
